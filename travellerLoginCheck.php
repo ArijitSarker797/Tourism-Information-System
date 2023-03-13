@@ -20,7 +20,7 @@
             if($flag){
                 setcookie('flag', 'abc', time()+300, '/');
                 $_SESSION['username'] = $username;
-                header('location: home.php');
+                header('location: tDashboard.php');
                 $flag = false; 
             }else{
                 header('location: travellerLogin.php?msg=error');
