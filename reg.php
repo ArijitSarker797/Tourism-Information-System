@@ -14,7 +14,7 @@
             <legend>Registration</legend>
                 Username: <input type="text" name="username" value=""/> <br>
                 Password: <input type="password" name="password" value=""/> <br> 
-                Email: <input type="email" name="email" value=""/> <br> 
+                Email: <input type="email" name="email" value=""/><br>                      
                 Phone: <input type="number" name="number" value=""> <br>
                 Gender:<input type="radio" name="gender" value=""/> Male
                        <input type="radio" name="gender" value=""/> Female

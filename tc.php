@@ -1,6 +1,6 @@
 <?php 
 	session_start();
-	if(isset($_COOKIE['status'])){
+	if(isset($_COOKIE['flag'])){
 ?>
 
 <html>
@@ -41,8 +41,7 @@ We may update our privacy policies from time to time. Any changes to our policie
 
 7.If you have any questions or concerns about our privacy policies, please contact us at [insert contact information].</p>
 	
-	<br><br>
-	<a align:right href="uHome.php"> Back </a><br><br>
+	<br>
 	
 
 </body>
