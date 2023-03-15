@@ -21,6 +21,7 @@
                 <legend>Traveller Login</legend>
                 Username: <input type="text" name="username" value=""/> <br>
                 Password: <input type="password" name="password" value=""/> <br> 
+                <h4><a href="resetpass.php">Forgot Password?</a></h4> <br>
                 <input type="submit" name="submit" value="Submit"/>
             </fieldset>
             </div>

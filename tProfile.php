@@ -1,4 +1,4 @@
-<table border="1" align="center"height="600px" width="600px">
+ <table border="1" align="center"height="600px" width="600px">
         <tr>
             <td colspan="2" align="center"> Profile</td>
         </tr>

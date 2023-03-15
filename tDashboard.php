@@ -11,6 +11,7 @@
         <h4><a href="index.html">Home</a></h4>
         <h1>welcome <?=$_SESSION['username']?>!</h1>
         <a href="tProfile.php">View Profile</a>
+        <a href="">Local Guides</a>
         <div align="center">
         <fieldset style="width: 800px;height: 400px;">
         <legend>Places to visit in Bangladesh</legend>

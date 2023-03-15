@@ -12,48 +12,13 @@
         <h1>welcome <?=$_SESSION['username']?>!</h1>
         
         <h3>Admin list</h3>
-
-        <table border="1">
-            <tr>
-                <th>Sr</th>
-                <th>Name</th>
-                <th>Password</th>
-                <th>Email</th>
-                <th>Phone</th>
-                <th>Date of Birth</th>
-            </tr>
-        <?php 
-            $file = fopen('tour.txt', 'r');
-            $sr=1;
-            
-
-            while(!feof($file)){
-                $data = fgets($file);
-                $user = explode('|', $data);
-                if(count($user) > 1){
-        ?>
-            <tr>
-                <td><?=$sr?></td>
-                <td><?=$user[0]?></td>
-                <td><?=$user[1]?></td>
-                <td><?=$user[2]?></td>
-                <td><?=$user[3]?></td>
-                <td><?=$user[4]?></td>
-            </tr>
-
-        <?php 
-            }
-            $sr++; 
-        } ?>
-        </table>
-
         <table border="1" align="center"height="600px" width="600px">
         <tr>
             <td colspan="2" align="center">Admin Profile</td>
         </tr>
         <?php 
             $file = fopen('tour.txt', 'r');
-            $sr=1;
+           
             
 
             while(!feof($file)){
