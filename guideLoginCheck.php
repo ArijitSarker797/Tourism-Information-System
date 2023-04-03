@@ -1,18 +1,18 @@
 <?php 
     session_start();
-    
-        $email = $_REQUEST['email']; 
+    if(isset($_REQUEST['submit'])){
+        $username = $_REQUEST['username']; 
         $password = $_REQUEST['password']; 
         $flag = false;
-        if($email == "" && $password == "") {
+        if($username == "" && $password == "") {
             echo "Null value ..";
         }else{
-            $file = fopen('traveller.txt', 'r');
+            $file = fopen('guide.txt', 'r');
             
             while(!feof($file)){
                 $data = fgets($file);
                 $user = explode('|', $data);
-                if($email == trim($user[2]) && $password == trim($user[1])){
+                if($username == trim($user[0]) && $password == trim($user[1])){
                     $flag = true; 
                 }
             }
@@ -20,12 +20,15 @@
             if($flag){
                 setcookie('flag', 'abc', time()+300, '/');
                 $_SESSION['username'] = $username;
-                $_SESSION['email'] = $email;
-                header('location: tDashboard.php');
+                header('location: gDashboard.php');
                 $flag = false; 
             }else{
-                header('location: travellerLogin.php?msg=error');
+                header('location: guideLogin.php?msg=error');
             }
+
+            //echo  "invalid user!";
         }
-   
+    }else{
+        echo "invalid request...";
+    }
 ?>

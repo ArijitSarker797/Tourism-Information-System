@@ -1,2 +1,2 @@
-Arjit Sarker | 123456| arghya@gmail.com | 01321061257 | 1997-07-21 | IMG_6112
-Fahad | 123456| fahad@gmail.com | 01321061257 | 1997-07-21 | images/IMG_6112
+Arjit Sarker | 123456| arghya@gmail.com | 01321061257 | 1997-07-21 | IMG_6112;
+Fahad | 123456| fahad@gmail.com | 01321061257 | 1997-07-21 | images/IMG_6112;   

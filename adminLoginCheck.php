@@ -1,7 +1,7 @@
 <?php 
     session_start();
     
-        $email = $_POST['email']; 
+        $email = $_POST['email'];
         $password = $_POST['password']; 
         $flag = false;
         if($email == "" && $password == "") {
@@ -20,6 +20,7 @@
             if($flag){
                 setcookie('flag', 'abc', time()+600, '/');
                 $_SESSION['username'] = $username;
+                $_SESSION['email'] = $email;
                 header('location: home.php');
                 $flag = false; 
             }else{

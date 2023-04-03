@@ -3,7 +3,7 @@
     
     if(isset($_REQUEST['msg'])){
         if($_REQUEST['msg'] == "error"){
-            echo "Invalid user/password, please register first!";
+            echo "Invalid email/password, please register first!";
         }else{
             header('location: index.html');
         }

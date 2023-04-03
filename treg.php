@@ -8,7 +8,7 @@
     </head>
 
     <body>
-        <form method="POST" action="regCheck.php" enctype="">
+        <form method="POST" action="tregCheck.php" enctype="">
             <div align="center">
             <fieldset style="width: 400px;height: 200px;">
             <legend>Registration</legend>
@@ -21,11 +21,11 @@
                        <input type="radio" name="gender" value=""/> other <br>
                 DOB:   <input type="date" name="dob" value="" /> <br> 
                 Profile Photo:<input type="file" name="img" value="" /> <br> 
-                User Type: <input type="radio" name="usertype" value="">Traveller
-                           <input type="radio" name="usertype" value="">Guide
+                <!-- User Type: <input type="radio" name="usertype" value="">Traveller
+                           <input type="radio" name="usertype" value="">Guide -->
                 <br>     
                 <input type="submit" name="submit" value="Submit"/>
-                <input type="button" name="" value="Reset" />
+                <input type="reset" name="" value="Reset" />
             </fieldset>
             </div>
         </form>

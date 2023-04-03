@@ -3,7 +3,7 @@
     
     if(isset($_REQUEST['msg'])){
         if($_REQUEST['msg'] == "error"){
-            echo "Invalid email/password, please register first!";
+            echo "Invalid user/password, please register first!";
         }else{
             header('location: index.html');
         }
@@ -15,11 +15,11 @@
     </head>
 
     <body>
-        <form method="POST" action="travellerLoginCheck.php" enctype="">
+        <form method="POST" action="guideLoginCheck.php" enctype="">
             <div align="center">
             <fieldset style="width: 400px;height: 200px;">
-                <legend>Traveller Login</legend>
-                Email: <input type="email" name="email" value=""/> <br>
+                <legend>Guide Login</legend>
+                Username: <input type="text" name="username" value=""/> <br>
                 Password: <input type="password" name="password" value=""/> <br> 
                 <h4><a href="resetpass.php">Forgot Password?</a></h4> <br>
                 <input type="submit" name="submit" value="Submit"/>

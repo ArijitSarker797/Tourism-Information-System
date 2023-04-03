@@ -9,7 +9,7 @@
 </head>
 <body>
         <h4><a href="index.html">Home</a></h4>
-        <h1>welcome <?=$_SESSION['username']?>!</h1>
+        <h1>welcome <?=$_SESSION['email']?>!</h1>
         
         <h3>Admin list</h3>
         <table border="1" align="center"height="600px" width="600px">
@@ -23,24 +23,28 @@
 
             while(!feof($file)){
                 $data = fgets($file);
-                $user = explode('|', $data);
-                if(count($user) > 1){
+                $user = explode(';', $data);
+                $user_count=count($user);
+                $user_single = explode('|', $user[0]);
+                $emailX=trim($user_single[2]);
+                if($emailX == $_SESSION['email']){
+
         ?>
         <tr>
             <td>
-                <ul>Name:<?=$user[0]?></ul>
-                <ul>Password:<?=$user[1]?></ul>
-                <ul>Email:<?=$user[2]?></ul>
-                <ul>Phone:<?=$user[3]?></ul>
-                <ul>Date of Birth:<?=$user[4]?></ul>
+                <ul>Name:<?=$user_single[0]?></ul>
+                <ul>Password:<?=$user_single[1]?></ul>
+                <ul>Email:<?=$user_single[2]?></ul>
+                <ul>Phone:<?=$user_single[3]?></ul>
+                <ul>Date of Birth:<?=$user_single[4]?></ul>
             </td>
             <td>
-                <ul><img src="images/<?=$user[5]?>" alt="" height="200px" width="140px" align="center"></ul>
+                <ul><img src="images/<?=$user_single[5]?>" alt="" height="200px" width="140px" align="center"></ul>
                 <ul><a href="changePicture.php">Change Picture</a></ul>
             </td>
         </tr>
         <?php 
-            }
+            }   
          
         }?>
     </table>
